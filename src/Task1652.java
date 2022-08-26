@@ -1,0 +1,20 @@
+import java.nio.file.Path;
+import java.util.Scanner;
+
+/*
+Абсолютный путь
+*/
+
+public class Task1652 {
+    public static void main(String[] args) {
+        //Этот код будет работать начиная с 11-й версии Java
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        Path path = Path.of(str);
+        if (!path.isAbsolute()) {
+            path = path.toAbsolutePath();
+        }
+        System.out.println(path);
+    }
+}
+
